@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 RSpec.describe PerformanceData, type: :model do
   describe 'Database table' do
     it { is_expected.to have_db_column :data }
@@ -14,6 +12,4 @@ RSpec.describe PerformanceData, type: :model do
       expect(create(:performance_data)).to be_valid
     end
   end
-  
-  pending "add some examples to (or delete) #{__FILE__}"
 end
