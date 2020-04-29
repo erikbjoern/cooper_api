@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 RSpec.describe Api::V0::PingsController, type: :request do
     describe 'GET /v0/pings' do
       before do
@@ -11,9 +9,7 @@ RSpec.describe Api::V0::PingsController, type: :request do
       end
 
       it'should return Pong' do 
-        json_response = JSON.parse (response.body)
-
-        expect(json_response['message']).to eq 'Pong'
+        expect(response_json['message']).to eq 'Pong'
       end
     end
  end
