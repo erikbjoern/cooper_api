@@ -43,5 +43,9 @@ RSpec.describe Api::V1::PerformanceDataController, type: :request do
     it 'returns a collection of performance data' do
       expect(response_json['entries'].count).to eq 5
         end
+    it 'returns data to the correct user' do 
+        expect(response_json['entries'].first['user_id']).to eq user['id']
+    
+    end
     end
 end
