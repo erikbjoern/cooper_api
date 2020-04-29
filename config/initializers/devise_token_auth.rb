@@ -5,3 +5,4 @@ DeviseTokenAuth.setup do |config|
   config.token_cost = Rails.env.test? ? 4 : 10
   config.batch_request_buffer_throttle = 5.seconds
 end
+

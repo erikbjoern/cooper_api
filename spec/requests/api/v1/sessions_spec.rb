@@ -66,4 +66,4 @@ Rspec.describe 'POST /api/v1/auth/sign_in', type: :request do
         end
       end
     end
-end
+
