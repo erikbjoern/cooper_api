@@ -80,7 +80,7 @@ RSpec.describe "POST '/api/v1/auth", type: :request do
       end
 
       it 'returns an error message' do
-        expect(response_json['errors']['email']).to eq ['has aldready been taken']
+        expect(response_json['errors']['email']).to eq ['has already been taken']
       end 
     end
 
@@ -101,7 +101,7 @@ RSpec.describe "POST '/api/v1/auth", type: :request do
         end
       
         it 'returns an error message' do
-          expect(response_json['errors']['email']).to eq ['please fill in email']
+          expect(response_json['errors']['email']).to eq ["can't be blank"]
         end
       end
     end
@@ -123,7 +123,7 @@ RSpec.describe "POST '/api/v1/auth", type: :request do
         end
       
         it 'returns an error message' do
-          expect(response_json['errors']['password']).to eq ['please choose a password']
+          expect(response_json['errors']['password']).to eq ["can't be blank"]
         end
       end
     end
@@ -145,7 +145,7 @@ RSpec.describe "POST '/api/v1/auth", type: :request do
         end
       
         it 'returns an error message' do
-          expect(response_json['errors']['password']).to eq ['please confirm your password']
+          expect(response_json['errors']['password_confirmation']).to eq ["doesn't match Password"]
         end
       end
     end

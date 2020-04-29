@@ -4,7 +4,7 @@ RSpec.describe 'POST /api/v1/auth/sign_in', type: :request do
     let(:expected_response) do
         {
             'data' => {
-                'id' => user.id, 'unid' => user.email, 'email' => user.email,
+                'id' => user.id, 'uid' => user.email, 'email' => user.email,
                 'provider' => 'email', 'allow_password_change' => false
             }
         }
@@ -24,7 +24,7 @@ RSpec.describe 'POST /api/v1/auth/sign_in', type: :request do
         end
 
         it 'returns the expected responce' do
-            expect(response_json).to eq expected_respone
+            expect(response_json).to eq expected_response
         end
     end
 
