@@ -10,6 +10,7 @@ gem 'puma', '~> 4.1'
 # gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'rack-cors'
+gem 'devise_token_auth'
 
 group :development, :test do
   gem 'pry-rails'
@@ -17,7 +18,6 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'factory_bot_rails'
-  gem 'devise_token_auth'
 end
 
 group :development do
