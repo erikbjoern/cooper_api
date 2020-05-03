@@ -8,14 +8,14 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 4.1'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'rack-cors'
+gem 'devise_token_auth'
 
 group :development, :test do
   gem 'pry-rails'
   gem 'pry-byebug'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
-  gem 'factory_bot_rails'
-  gem 'devise_token_auth'
+  gem 'factory_bot_rails' 
 end
 
 group :development do
